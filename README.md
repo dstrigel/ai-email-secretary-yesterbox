@@ -75,6 +75,18 @@ Or manually:
 4. Upload an email file using the filename pattern  
 5. Review classifications and evaluation output  
 
+### Configuration
+
+Create a `config.json` file in the project directory. This file stores your OpenAI API key and the API base URL.
+
+Use this structure:
+
+```json
+{
+    "API_KEY": "your_openai_api_key_here",
+    "OPENAI_API_BASE": "https://aibe.mygreatlearning.com/openai/v1"
+}
+
 ---
 
 ## Background (Optional)
