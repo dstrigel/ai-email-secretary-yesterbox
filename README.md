@@ -9,8 +9,14 @@ This project simulates a real-world workflow: fetching messages, filtering them 
 ## Features
 
 ### Email Intake and Filtering
-- Automatically identifies “yesterday’s” messages by parsing the filename pattern  
+- Automatically identifies “yesterday’s” messages by parsing the filename pattern   
 - Implements Yesterbox-style triage: urgent, deadline-driven, high-priority, low-priority, FYI
+- Dynamic Yesterbox date from filename
+- LLM classification into your 6 categories
+- Category summary (count, percent, example subject)
+- Yesterbox-style actionable insights
+- Prioritized inbox view
+- Draft replies for high-priority emails
 
 ### Classification and Reasoning
 - Uses structured prompts to classify each email into predefined categories  
