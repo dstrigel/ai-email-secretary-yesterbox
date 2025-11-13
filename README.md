@@ -27,6 +27,18 @@ This project simulates a real-world workflow: fetching messages, filtering them 
 - Scores the output against key criteria: Innovation, Approach, Significance, and Expertise  
 - Produces justification, strengths, weaknesses, and recommendations  
 
+### How the Tool Detects “Yesterday’s” Emails
+
+When you export your email file each morning, save it using this pattern:
+
+`Alex_emails_month_day.csv`
+
+Example:
+
+`Alex_emails_march_04.csv`
+
+The tool automatically reads the date from the filename and determines which messages should be treated as “yesterday.” There is **no hard-coded date** — it works dynamically based on whatever file you upload.
+
 ---
 
 ## Technologies Used
