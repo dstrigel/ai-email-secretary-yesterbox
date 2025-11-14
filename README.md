@@ -1,129 +1,83 @@
-# AI Email Secretary (Yesterbox + LLM Automation)
+# AI Email Secretary (Yesterbox Workflow)
 
-The AI Email Secretary is a hands-on demonstration of applied generative AI, combining large language model reasoning, Yesterbox-style prioritization, and structured JSON evaluation to help users organize and act on incoming email with minimal effort.
+This project automates email triage using the Yesterbox method. It reads a daily CSV export of emails, extracts priorities, identifies urgent messages, and generates clear, actionable summaries including draft responses.
 
-This project simulates a real-world workflow: fetching messages, filtering them by date, classifying their urgency and action requirements, and generating executive-level summaries. The implementation includes prompt engineering, error handling, and automated scoring of results using LLM-as-Judge logic.
-
----
+This version is designed as a professional prototype suitable for recruiters and technical reviewers.
 
 ## Features
 
-### Email Intake and Filtering
-- Automatically identifies “yesterday’s” messages by parsing the filename pattern   
-- Implements Yesterbox-style triage: urgent, deadline-driven, high-priority, low-priority, FYI
-- Dynamic Yesterbox date from filename
-- LLM classification into your 6 categories
-- Category summary (count, percent, example subject)
-- Yesterbox-style actionable insights
-- Prioritized inbox view
-- Draft replies for high-priority emails
+- Detects the "yesterday" CSV based on filename  
+- Cleans and structures email data  
+- Identifies tasks, follow ups, requests, and deadlines  
+- Flags urgent or high priority messages  
+- Generates a concise Yesterbox style summary  
+- Produces draft responses using email context  
+- Automatically uses a sample file if no upload is provided  
 
-### Classification and Reasoning
-- Uses structured prompts to classify each email into predefined categories  
-- Ensures consistent JSON outputs for downstream processing  
-- Includes validation and recovery prompts to handle malformed responses
+## How to Run
 
-### Summaries and Reporting
-- Generates summaries for:
-  - Urgent and high-priority emails  
-  - Deadlines and required follow-ups  
-  - Key trends and observations  
+### Option 1: Google Colab
 
-### LLM-as-Judge Evaluation
-- Scores the output against key criteria: Innovation, Approach, Significance, and Expertise  
-- Produces justification, strengths, weaknesses, and recommendations  
+1. Open the notebook in Google Colab.  
+2. Upload your CSV or use the sample file included.  
+3. Enter your OpenAI API key in the secrets cell.  
+4. Run the notebook from top to bottom.
 
-### How the Tool Detects “Yesterday’s” Emails
-
-When you export your email file each morning, save it using this pattern:
-
-`Alex_emails_month_day.csv`
-
-Example:
-
-`Alex_emails_march_04.csv`
-
-The tool automatically reads the date from the filename and determines which messages should be treated as “yesterday.” There is **no hard-coded date** — it works dynamically based on whatever file you upload.
-
----
-
-## Technologies Used
-- Python  
-- OpenAI API  
-- Prompt Engineering  
-- JSON schema and validation  
-- Yesterbox methodology  
-- LLM-as-Judge evaluation  
-- Jupyter Notebook  
-
----
-
-## Project Structure
-
-    ai-email-secretary-yesterbox
-    │
-    ├── JHU_AGAI_W9_Mid_Term_Project_Learners_Notebook_43.ipynb
-    ├── README.md
-    └── requirements.txt   (optional)
-
----
-
-## Installation
-
-To clone the repository:
-
-    git clone https://github.com/<your-username>/ai-email-secretary-yesterbox.git
-    cd ai-email-secretary-yesterbox
+### Option 2: Run Locally
 
 Install dependencies:
 
     pip install -r requirements.txt
 
-Or manually:
+Launch Jupyter:
 
-    pip install openai python-dotenv
+    jupyter notebook
 
----
+Open the notebook and run all cells.
 
-## Running the Notebook
+## Repository Structure
 
-1. Open the notebook in Jupyter, VS Code, or Google Colab  
-2. Add your OpenAI API key to your environment  
-3. Run the cells in order  
-4. Upload an email file using the filename pattern  
-5. Review classifications and evaluation output  
+    ai-email-secretary-yesterbox/
+    ├── AI_Email_Secretary_v43_Portfolio.ipynb
+    ├── requirements.txt
+    ├── sample_data/
+    │   └── Alex_emails_march_04.csv
+    └── screenshots/
+        ├── summary.png
+        └── output_block.png
 
-### Configuration
+## Configuration
 
-Create a `config.json` file in the project directory. This file stores your OpenAI API key and the API base URL.
+The notebook requires an `OPENAI_API_KEY`.
 
-Use this structure:
+Set it as an environment variable:
 
-```json
-{
-    "API_KEY": "your_openai_api_key_here",
-    "OPENAI_API_BASE": "https://aibe.mygreatlearning.com/openai/v1"
-}
+    export OPENAI_API_KEY="your_key_here"
 
----
+Or use the Colab secrets UI inside the notebook.
 
-## Background (Optional)
+## Why This Project Matters
 
-This project started in a graduate-level generative AI course at Johns Hopkins but has since been expanded with improved prompts, validation logic, and evaluation workflows.
+This is a practical AI workflow demonstrating:
 
----
+- Python workflow automation  
+- CSV and structured data processing  
+- LLM based reasoning and summarization  
+- Prompt engineering  
+- Real world productivity automation  
 
-## Future Enhancements
-- Gradio user interface  
-- HuggingFace Space deployment  
-- Email inbox integration  
-- Vector database for long-term memory  
-- Agent-based follow-up actions  
+Recruiters and technical reviewers can run it quickly and see meaningful output.
 
----
+## Requirements
 
-## Contact
-Feel free to open an issue or reach out with questions.
+Create a `requirements.txt` file with the following contents:
+
+    pandas
+    python-dotenv
+    openai
+    tiktoken
+    jupyter
+
 
 
 ## **Project Structure**
