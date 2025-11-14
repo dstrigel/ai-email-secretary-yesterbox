@@ -98,4 +98,4 @@ A sample of the cleaned email data after CSV ingestion and preprocessing:
 
 ### AI-drafted responses.png
 
-![Data Preview](screenshots/AI-drafted responses.png)
+![Data Preview](screenshots/AI-drafted_responses.png)
