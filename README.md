@@ -1,3 +1,5 @@
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/dstrigel/ai-email-secretary-yesterbox/blob/main/AI_Email_Secretary_YesterBox_Edition.ipynb)
+
 # AI Email Secretary (Yesterbox Workflow)
 
 This project automates email triage using the Yesterbox method. It reads a daily CSV export of emails, extracts priorities, identifies urgent messages, and generates clear, actionable summaries including draft responses.
