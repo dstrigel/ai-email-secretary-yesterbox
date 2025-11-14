@@ -37,16 +37,19 @@ Launch Jupyter:
 
 Open the notebook and run all cells.
 
-## Repository Structure
+## Project Structure
+
+The repository is organized as follows:
 
     ai-email-secretary-yesterbox/
-    ├── AI_Email_Secretary_v43_Portfolio.ipynb
-    ├── requirements.txt
-    ├── sample_data/
+    ├── AI_Email_Secretary_YesterBox_Edition.ipynb   # Main notebook
+    ├── README.md                                    # Project overview and instructions
+    ├── requirements.txt                             # Python dependencies
+    ├── sample_data/                                 # Example email dataset
     │   └── Alex_emails_march_04.csv
-    └── screenshots/
-        ├── summary.png
-        └── output_block.png
+    └── screenshots/                                 # Visual outputs for recruiters
+        ├── summary_output.png
+        └── data_preview.png
 
 ## Configuration
 
@@ -80,9 +83,19 @@ Create a `requirements.txt` file with the following contents:
     tiktoken
     jupyter
 
+## Recruiter Notes: Why This Project Matters
 
+This project demonstrates the ability to design and implement a complete AI workflow from scratch. It highlights strengths that translate directly into real-world delivery roles:
 
-## **Project Structure**
+- Turning an ambiguous goal into a working, end-to-end solution  
+- Structuring a clear, modular Python workflow  
+- Applying LLM prompt engineering for consistent, high-quality output  
+- Cleaning and preparing real-world data (CSV ingestion, preprocessing, validation)  
+- Using file-based logic and automation to reduce manual steps  
+- Communicating the workflow clearly through clean documentation  
+- Designing a practical AI assistant that improves actual daily productivity  
+
+This is not a toy example. It’s a functional prototype that shows how to build usable AI tools that solve real problems. It reflects a blend of program management discipline, technical problem-solving, and hands-on AI development.
 
 ## Screenshots
 
